@@ -10,6 +10,10 @@ import tailwind from '../assets/tailwind.png';
 import figma from '../assets/figma.png';
 import vscode from '../assets/vscode.png';
 import firebase from '../assets/firebase.png';
+import cpp from '../assets/cpp.png';
+import redux from '../assets/redux-icon.png';
+import node from '../assets/node.png';
+
 
 const Skills = () => {
   const techs = [
@@ -30,36 +34,51 @@ const Skills = () => {
     },
     {
       id: 4,
+      src: cpp,
+      title: 'CPP',
+    },
+    {
+      id: 5,
       src: reactImage,
       title: 'React',
     },
     {
-      id: 5,
+      id: 6,
+      src: redux,
+      title: 'Redux',
+    },
+    {
+      id: 7,
+      src: node,
+      title: 'Node js',
+    },
+    {
+      id: 8,
       src: tailwind,
       title: 'Tailwind',
     },
     {
-      id: 6,
+      id: 9,
       src: vscode,
       title: 'VS Code',
     },
     {
-      id: 7,
+      id: 10,
       src: figma,
       title: 'Figma',
     },
     {
-      id: 8,
+      id: 11,
       src: github,
       title: 'GitHub',
     },
     {
-      id: 9,
+      id: 12,
       src: git,
       title: 'Git',
     },
     {
-      id: 10,
+      id: 13,
       src: firebase,
       title: 'Firebase',
     },
@@ -86,7 +105,7 @@ const Skills = () => {
               key={id}
               className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg `}
             >
-              <img src={src} alt="" className="w-20 mx-auto" />
+              <img src={src} alt={title} className="w-20 mx-auto" />
               <p className="mt-4">{title}</p>
             </div>
           ))}
