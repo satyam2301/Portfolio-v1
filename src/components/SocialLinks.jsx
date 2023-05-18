@@ -12,7 +12,7 @@ const SocialLinks = () => {
           LinkedIn <FaLinkedin size={30} />
         </>
       ),
-      href: 'https://linkedin.com',
+      href: 'https://www.linkedin.com/in/satyamkumar23/',
       style: 'rounded-tr-md',
     },
     {
@@ -47,20 +47,20 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div className=" flex flex-row top-[35%] left-0 fixed bg-gradient-to-b from-purple-500 to-pink-500">
+    <div className=" flex flex-row top-[35%] left-0 fixed ">
       <ul>
         {links.map(({ id, child, href, style, download }) => (
           <li
             key={id}
             className={
-              'flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 ' +
+              'flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-lg duration-500 ' +
               ' ' +
               style
             }
           >
             <a
               href={href}
-              className="flex justify-between items-center w-full text-white"
+              className="flex justify-between items-center w-full font-bold text-white"
               download={download}
               target="_blank"
               rel="noreferrer"

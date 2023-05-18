@@ -2,7 +2,7 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay } from 'swiper';
-import wave from '../assets/wave.png';
+import wave from '../assets/wave.webp';
 
 const Home = () => {
   return (
@@ -10,7 +10,7 @@ const Home = () => {
       name="home"
       className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800"
     >
-      <div className="max-w-screen-lg mx-auto flex flex-row items-center justify-center h-full px-4 ">
+      <div className="max-w-screen-lg z-10 mx-auto flex flex-row items-center justify-center h-full px-4 ">
         <Swiper
           centeredSlides={true}
           loop={true}
@@ -38,6 +38,7 @@ const Home = () => {
                 <span className="text-xl mb-8 uppercase tracking-widest text-gray-400">
                   Hello!
                 </span>
+
                 <span>
                   <img
                     style={{
@@ -47,6 +48,7 @@ const Home = () => {
                       marginLeft: '10px',
                     }}
                     src={wave}
+                    alt="hello wave"
                   />
                 </span>
                 <span className="text-xl mb-8 uppercase tracking-widest text-gray-400">

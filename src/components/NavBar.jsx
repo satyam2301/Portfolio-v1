@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import { Link,animateScroll } from 'react-scroll';
+import { Link, animateScroll } from 'react-scroll';
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -24,31 +24,32 @@ const NavBar = () => {
     },
   ];
 
-    const handleClick = (event, targetId) => {
-        event.preventDefault();
-        animateScroll.scrollTo(targetId, {
-            duration: 500,  // Duration of the scroll animation in milliseconds
-            delay: 0,       // Delay before the scroll animation starts in milliseconds
-            smooth: 'easeInOutQuint'  // Type of easing function to use for the scroll animation
-        });
-    };
+  const handleClick = (event, targetId) => {
+    event.preventDefault();
+    animateScroll.scrollTo(targetId, {
+      duration: 1000,
+      delay: 0,
+      smooth: 'easeInOutQuint',
+    });
+  };
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black/50 fixed">
+    <div className="flex justify-between items-center w-full h-20 px-4 text-white fixed">
       <div>
-        <h1 className="text-5xl font-signature ml-2">SK</h1>
+        <h1 className="text-6xl font-signature ml-2">SK</h1>
       </div>
 
       <ul className="hidden md:flex">
         {links.map(({ id, link }) => (
           <li
             key={id}
-            className="px-4 cursor-pointer capitalize font-medium text-gray-300 hover:scale-105 duration-200"
+            className="px-4 rounded-lg hover:text-slate-700 hover:bg-slate-100 text-2xl cursor-pointer capitalize font-medium text-gray-300 hover:scale-105 duration-200"
           >
-            <Link to={link}
-                  smooth
-                  duration={500}
-                  onClick={(event) => handleClick(event, link)}
+            <Link
+              to={link}
+              smooth
+              duration={1000}
+              onClick={(event) => handleClick(event, link)}
             >
               {link}
             </Link>
@@ -70,13 +71,14 @@ const NavBar = () => {
               key={id}
               className="px-4 cursor-pointer capitalize py-6 text-4xl"
             >
-                <Link to={link}
-                      smooth
-                      duration={500}
-                      onClick={(event) => handleClick(event, link)}
-                >
-                    {link}
-                </Link>
+              <Link
+                to={link}
+                smooth
+                duration={1000}
+                onClick={(event) => handleClick(event, link)}
+              >
+                {link}
+              </Link>
             </li>
           ))}
         </ul>
